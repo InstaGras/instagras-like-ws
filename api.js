@@ -45,16 +45,19 @@ myRouter.route('/likesws/likes/')
 });
 
 // GET
-myRouter.route('/likesws/allLikes/:id')
+
+myRouter.route('/likesws/likes/:id')
 .get(function(req, response){
+  console.log('1er get');
 	routes.getAllLikesOfPublication(req, response, client);
-})
+});
 
 
-myRouter.route('/likesws/allLikes/:id')
+myRouter.route('/likesws/likes/getLikeUser/:id/:username')
 .get(function(req, response){
+  console.log('2eme get');
 	routes.getLikeOfOneUserForOnePublication(req, response, client);
-})
+});
 
 
 // DELETE
