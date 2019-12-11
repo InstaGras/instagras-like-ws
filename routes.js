@@ -23,6 +23,7 @@ function getAllLikesOfPublication(req, response, client){
 }
 
 function getLikeOfOneUserForOnePublication(req, response, client){
+
 	const username = req.params.username;
 	const id = req.params.id;
 	const likeSelectionQuery = {
@@ -118,6 +119,9 @@ function likePublication(req,response, client){
 			}
 		}
 	});
+
+}
+	  
 
 function undoLike(req, response, client){
 
